@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "671541766189",
+    "firebase_url": "https://chatme-854ec-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "chatme-854ec",
+    "storage_bucket": "chatme-854ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671541766189:android:766cc4527873668b3ef0a4",
+        "android_client_info": {
+          "package_name": "mir.jan.chatme"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqh-Rav6CcL1oR3ewQ2Z62F0J_uWMPsQs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

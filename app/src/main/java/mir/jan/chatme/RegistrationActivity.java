@@ -38,11 +38,11 @@ public class RegistrationActivity extends AppCompatActivity {
 
         // initialising all views through id defined above
         emailTextView = findViewById(R.id.email);
-        passwordTextView = findViewById(R.id.passwd);
+        passwordTextView = findViewById(R.id.password);
         userName = findViewById(R.id.username);
-        Btn = findViewById(R.id.btnregister);
+        Btn = findViewById(R.id.register);
         loginLink = findViewById(R.id.loginLink);
-        progressbar = findViewById(R.id.progressbar);
+        progressbar = findViewById(R.id.progressBar);
 
         loginLink.setOnClickListener(new View.OnClickListener() {
             @Override

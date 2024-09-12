@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_vertical"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
@@ -53,6 +54,7 @@
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:textAppearance="@style/TextAppearance.Sc.Components.Hint"
                 android:hint="Enter your Email" />
 
@@ -71,6 +73,7 @@
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:textAppearance="@style/TextAppearance.Sc.Components.Hint"
                 android:hint="Enter your Password"
                 android:inputType="textPassword" />
@@ -90,6 +93,7 @@
                 android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:textAppearance="@style/TextAppearance.Sc.Components.Hint"
                 android:hint="Enter your username"
                 android:inputType="textPassword" />
@@ -104,6 +108,7 @@
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="24dp"
             app:backgroundTint="#4dc3ff"
+            android:textColor="@color/white"
             android:stateListAnimator="@null"
             android:textAppearance="@style/TextAppearance.Sc.Components.Button"
             app:cornerRadius="4dp"

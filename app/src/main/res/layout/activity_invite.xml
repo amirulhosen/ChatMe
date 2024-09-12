@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <TextView
@@ -31,12 +32,15 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="32dp"
+        app:hintTextColor="@color/black"
         app:boxStrokeColor="#4d79ff">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/friendId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:textAppearance="@style/TextAppearance.Sc.Components.Hint"
             android:hint="Enter the ID you want to chat with" />
 
@@ -49,6 +53,7 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="24dp"
         app:backgroundTint="#4dc3ff"
+        android:textColor="@color/white"
         android:stateListAnimator="@null"
         android:textAppearance="@style/TextAppearance.Sc.Components.Button"
         app:cornerRadius="4dp"

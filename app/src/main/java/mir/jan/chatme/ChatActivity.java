@@ -4,6 +4,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -42,6 +44,7 @@ public class ChatActivity extends AppCompatActivity {
     TextView name, userstatus;
     EditText msg;
     ImageButton send;
+    Toolbar toolbar;
     FirebaseAuth firebaseAuth;
     String uid, myuid, image;
     ValueEventListener valueEventListener;
@@ -65,7 +68,8 @@ public class ChatActivity extends AppCompatActivity {
         msg = findViewById(R.id.messaget);
         send = findViewById(R.id.sendmsg);
         block = findViewById(R.id.block);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        toolbar =findViewById(R.id.toolbar);
+         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setStackFromEnd(true);
         recyclerView = findViewById(R.id.chatrecycle);
         recyclerView.setHasFixedSize(true);
@@ -73,9 +77,15 @@ public class ChatActivity extends AppCompatActivity {
         uid = getIntent().getStringExtra("uid");
         // getting uid of another user using intent
         firebaseDatabase = FirebaseDatabase.getInstance();
-
+        getWindow().setStatusBarColor(getResources().getColor(R.color.black));
         checkUserStatus();
         users = firebaseDatabase.getReference();
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         send.setOnClickListener(v -> {
             notify = true;
             String message = msg.getText().toString().trim();

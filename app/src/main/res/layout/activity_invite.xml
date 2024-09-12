@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/TextAppearance.MaterialComponents.Headline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.Sc.Components.Header1"
+        android:text="Profile ID:"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/idTextView"
+        android:textAppearance="@style/TextAppearance.Sc.Components.Header1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#3399ff"
+        android:padding="8dp"
+        android:background="@drawable/profile_bg"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="32dp"
+        app:boxStrokeColor="#4d79ff">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/friendId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Sc.Components.Hint"
+            android:hint="Enter the ID you want to chat with" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="24dp"
+        app:backgroundTint="#4dc3ff"
+        android:stateListAnimator="@null"
+        android:textAppearance="@style/TextAppearance.Sc.Components.Button"
+        app:cornerRadius="4dp"
+        android:padding="16dp"
+        android:text="Search" />
+
+</LinearLayout>

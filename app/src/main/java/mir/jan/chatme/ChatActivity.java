@@ -21,6 +21,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -56,7 +57,7 @@ public class ChatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
         firebaseAuth = FirebaseAuth.getInstance();
-
+        getWindow().setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.chat_bg));
         // initialise the text views and layouts
         profile = findViewById(R.id.profiletv);
         name = findViewById(R.id.nameptv);
@@ -198,6 +199,7 @@ public class ChatActivity extends AppCompatActivity {
                     adapterChat = new AdapterChat(ChatActivity.this, chatList, image);
                     adapterChat.notifyDataSetChanged();
                     recyclerView.setAdapter(adapterChat);
+                    recyclerView.scrollToPosition(chatList.size()-1);
                 }
             }
 

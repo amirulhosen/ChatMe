@@ -13,8 +13,7 @@
                 <corners android:radius="4dp" />
                 <padding
                     android:bottom="1px"
-                    android:left="1px"
-                    android:right="1px" />
+                    android:left="1px"/>
                 <solid android:color="#01000000" />
             </shape>
         </rotate>
@@ -39,7 +38,7 @@
             android:toDegrees="0">
             <shape android:shape="rectangle">
                 <corners android:radius="4dp" />
-                <padding android:bottom="1px" />
+                <padding android:bottom="1px" android:right="-1dp" />
                 <solid android:color="#09000000" />
             </shape>
         </rotate>

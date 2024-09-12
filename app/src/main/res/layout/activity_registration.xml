@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/logoView"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:src="@drawable/chat_logo"
         app:layout_constraintBottom_toTopOf="@+id/login_text"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,10 +21,10 @@
 
     <TextView
         android:id="@+id/login_text"
-        style="@style/TextAppearance.MaterialComponents.Headline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register"
+        android:textAppearance="@style/TextAppearance.Sc.Components.Header1"
         app:layout_constraintBottom_toTopOf="@+id/loginLayout"
         app:layout_constraintEnd_toEndOf="@id/logoView"
         app:layout_constraintStart_toStartOf="@id/logoView"
@@ -53,6 +53,7 @@
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Sc.Components.Hint"
                 android:hint="Enter your Email" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -70,6 +71,7 @@
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Sc.Components.Hint"
                 android:hint="Enter your Password"
                 android:inputType="textPassword" />
 
@@ -88,20 +90,23 @@
                 android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Sc.Components.Hint"
                 android:hint="Enter your username"
                 android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Button for Login with text "Login" -->
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="24dp"
-            android:background="#327fa8"
-            android:backgroundTint="#327fa8"
+            app:backgroundTint="#4dc3ff"
+            android:stateListAnimator="@null"
+            android:textAppearance="@style/TextAppearance.Sc.Components.Button"
+            app:cornerRadius="4dp"
             android:padding="16dp"
             android:text="Register" />
 
@@ -111,15 +116,10 @@
             android:layout_height="wrap_content"
             android:textColor="#0000EE"
             android:id="@+id/loginLink"
+            android:textAppearance="@style/TextAppearance.Sc.Components.Body"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="16dp"
             android:text="Already registered? click to login."/>
     </LinearLayout>
-    <!-- ProgressBar for Loading Time -->
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

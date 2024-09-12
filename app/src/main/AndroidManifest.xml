@@ -22,10 +22,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ChatActivity" />
+        <activity android:name=".ChatActivity" android:windowSoftInputMode="adjustResize"/>
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".UserListActivity" />
+        <activity android:name=".InviteActivity" />
     </application>
 
 </manifest>

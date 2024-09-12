@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/logoView"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:src="@drawable/chat_logo"
         app:layout_constraintVertical_chainStyle="packed"
         app:layout_constraintBottom_toTopOf="@+id/login_text"
@@ -29,7 +29,7 @@
         app:layout_constraintStart_toStartOf="@id/logoView"
         app:layout_constraintEnd_toEndOf="@id/logoView"
         app:layout_constraintBottom_toTopOf="@+id/loginLayout"
-        style="@style/TextAppearance.MaterialComponents.Headline3"/>
+        android:textAppearance="@style/TextAppearance.Sc.Components.Header1"/>
 
     <LinearLayout
         android:id="@+id/loginLayout"
@@ -53,6 +53,7 @@
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Sc.Components.Hint"
                 android:hint="Enter your Email" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -70,24 +71,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter your Password"
+                android:textAppearance="@style/TextAppearance.Sc.Components.Hint"
                 android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Button for Login with text "Login" -->
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:padding="16dp"
+            app:backgroundTint="#4dc3ff"
+            android:stateListAnimator="@null"
+            app:cornerRadius="4dp"
+            android:textAppearance="@style/TextAppearance.Sc.Components.Button"
             android:layout_marginTop="24dp"
             android:text="Login" />
     </LinearLayout>
-    <!-- ProgressBar for Loading Time -->
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone" />
 </androidx.constraintlayout.widget.ConstraintLayout>

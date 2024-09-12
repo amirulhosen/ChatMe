@@ -17,7 +17,7 @@ public class LauncherActivity extends AppCompatActivity {
         Intent intent;
         if (uid != null) {
             intent = new Intent(this,
-                    UserListActivity.class);
+                    InviteActivity.class);
         } else {
             intent = new Intent(this,
                     RegistrationActivity.class);

@@ -42,6 +42,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="HisName"
+                    android:textAppearance="@style/TextAppearance.Sc.Components.Body"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -51,6 +52,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Online"
+                    android:textAppearance="@style/TextAppearance.Sc.Components.Body"
                     android:textColor="@color/white"
                     android:textStyle="bold" />
 
@@ -71,7 +73,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/chatlayout"
-        android:background="@drawable/chat_bg"
         android:layout_below="@id/toolbar" />
 
     <LinearLayout
@@ -90,6 +91,8 @@
             android:layout_weight="1"
             android:background="@null"
             android:hint="Start Typing"
+            android:textColor="@color/black"
+            android:textAppearance="@style/TextAppearance.Sc.Components.Hint"
             android:inputType="textCapSentences|textMultiLine"
             android:padding="15dp" />
 

@@ -1,11 +1,9 @@
 package mir.jan.chatme;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.content.Intent;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.EditText;
@@ -25,8 +23,8 @@ public class RegistrationActivity extends AppCompatActivity {
     private EditText emailTextView, passwordTextView, userName;
     private Button Btn;
     private TextView loginLink;
-    private ProgressBar progressbar;
     private FirebaseAuth mAuth;
+    private AlertDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +40,7 @@ public class RegistrationActivity extends AppCompatActivity {
         userName = findViewById(R.id.username);
         Btn = findViewById(R.id.register);
         loginLink = findViewById(R.id.loginLink);
-        progressbar = findViewById(R.id.progressBar);
-
+        progressDialog = ProgressDialog.getAlertDialog(this);
         loginLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,12 +52,12 @@ public class RegistrationActivity extends AppCompatActivity {
         });
         // Set on Click Listener on Registration button
         Btn.setOnClickListener(v -> {
-            if (emailTextView.getText() != null && passwordTextView.getText() != null && userName.getText() != null)
+            if (!emailTextView.getText().toString().trim().isBlank() && !passwordTextView.getText().toString().trim().isBlank() && !userName.getText().toString().trim().isBlank())
                 registerNewUser();
             else {
 
                 // hide the progress bar
-                progressbar.setVisibility(View.GONE);
+                progressDialog.dismiss();
 
                 // Create the object of AlertDialog Builder class
                 AlertDialog.Builder builder = new AlertDialog.Builder(RegistrationActivity.this);
@@ -90,7 +87,7 @@ public class RegistrationActivity extends AppCompatActivity {
     private void registerNewUser() {
 
         // show the visibility of progress bar to show loading
-        progressbar.setVisibility(View.VISIBLE);
+        progressDialog.show();
 
         // Take the value of two edit texts in Strings
         String email, password;
@@ -129,17 +126,17 @@ public class RegistrationActivity extends AppCompatActivity {
                         usersRef.setValue(profileUpdates).isSuccessful();
 
                         // hide the progress bar
-                        progressbar.setVisibility(View.GONE);
+                        progressDialog.dismiss();
 
                         // if the user created intent to login activity
                         Intent intent
                                 = new Intent(RegistrationActivity.this,
-                                UserListActivity.class);
+                                InviteActivity.class);
                         startActivity(intent);
                     } else {
 
                         // hide the progress bar
-                        progressbar.setVisibility(View.GONE);
+                        progressDialog.dismiss();
 
                         // Create the object of AlertDialog Builder class
                         AlertDialog.Builder builder = new AlertDialog.Builder(this);
